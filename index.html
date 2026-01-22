@@ -1,253 +1,169 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Senior Backend Developer — Java & Spring Boot</title>
-  <meta name="description" content="Senior Backend Developer portfolio — Java, Spring Boot, Microservices, Security, CI/CD">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thet Paing Oo | Senior Backend Developer</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
-    :root{
-      --bg: #f7f9fc;
-      --card: #ffffff;
-      --muted: #6b7280;
-      --accent: #0a2540; /* navy */
-      --accent-2: #0f6ab4; /* blue */
-      --glass: rgba(255,255,255,0.6);
-      --radius: 14px;
-      --shadow: 0 6px 18px rgba(10,37,64,0.08);
-      color-scheme: light;
-    }
-    .dark{
-      --bg:#0b1220;
-      --card:#071024;
-      --muted:#9ca3af;
-      --accent:#7dd3fc; /* light cyan for accent in dark */
-      --accent-2:#60a5fa;
-      --glass: rgba(255,255,255,0.03);
-      --shadow: 0 6px 24px rgba(2,6,23,0.6);
-      color-scheme: dark;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:'Inter',system-ui,-apple-system,"Segoe UI",Roboto,Arial;
-      background:linear-gradient(180deg,var(--bg),#e9eef7 60%);
-      color:var(--accent);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.45;
-      padding:32px 20px;
-    }
-
-    .container{max-width:1100px;margin:0 auto}
-
-    header.top {
-      display:flex;gap:16px;align-items:center;justify-content:space-between;margin-bottom:28px;
-    }
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{
-      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)
-    }
-    h1.title{margin:0;font-size:20px;color:var(--accent-2)}
-    p.subtitle{margin:0;color:var(--muted);font-size:13px}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start}
-    .card{background:var(--card);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
-    .bio{padding:6px 2px}
-    .hero h2{margin:6px 0 6px;font-size:28px;color:var(--accent)}
-    .lead{color:var(--muted);margin-bottom:16px}
-
-    .chips{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:linear-gradient(180deg,rgba(0,0,0,0.03),rgba(0,0,0,0.01));padding:8px 12px;border-radius:999px;font-size:13px;color:var(--accent);border:1px solid rgba(10,37,64,0.06)}
-
-    .profile{display:flex;flex-direction:column;gap:14px;align-items:center;text-align:center}
-    .avatar{width:120px;height:120px;border-radius:16px;background:linear-gradient(180deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;color:white;font-size:28px;font-weight:700;box-shadow:var(--shadow)}
-    .contact{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-
-    /* Projects grid */
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
-    .project{border-radius:12px;padding:16px;background:linear-gradient(180deg,var(--card),var(--glass));border:1px solid rgba(10,37,64,0.04)}
-    .project h3{margin:0 0 8px;font-size:16px;color:var(--accent)}
-    .project p{margin:0;color:var(--muted);font-size:14px}
-    .project .tech{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .project a.btn{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:10px;text-decoration:none;border:1px solid transparent;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:600}
-
-    /* Section styles */
-    section.workspace{margin-top:26px}
-    section h2{font-size:18px;color:var(--accent);margin:0 0 12px}
-
-    /* Footer */
-    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
-
-    /* Utilities */
-    .row{display:flex;gap:12px;align-items:center}
-    .grow{flex:1}
-
-    /* Responsive */
-    @media (max-width:880px){
-      .hero{grid-template-columns:1fr;}
-      .projects{grid-template-columns:1fr}
-    }
-
-    /* small touch interactions */
-    .project:hover{transform:translateY(-6px);transition:all .25s ease;box-shadow:0 12px 32px rgba(2,6,23,0.12)}
-    .chip:hover{transform:translateY(-3px);transition:all .18s ease}
-
-    /* Dark mode toggle */
-    .toggle{background:transparent;border:1px solid rgba(10,37,64,0.08);padding:8px;border-radius:10px;cursor:pointer}
+    body { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
-  <div id="page" class="container">
-    <header class="top">
-      <div class="brand">
-        <div class="logo" aria-hidden>SB</div>
-        <div>
-          <h1 class="title">Senior Backend Developer</h1>
-          <p class="subtitle">Java • Spring Boot • Microservices • Secure & Scalable Systems</p>
-        </div>
-      </div>
 
-      <div class="row">
-        <button class="toggle" id="themeToggle" aria-pressed="false" title="Toggle dark mode">Toggle dark</button>
-        <a href="#contact" class="toggle" style="text-decoration:none;color:var(--accent)">Contact</a>
-      </div>
-    </header>
+<body class="bg-slate-50 text-slate-800">
 
-    <main class="hero">
-      <div class="card">
-        <div class="bio">
-          <h2>About Me</h2>
-          <p class="lead">Senior Backend Developer with deep expertise in Java and Spring Boot, specialising in designing scalable, secure, high-performance backend systems. I lead architecture discussions, mentor teams, and ship reliable systems in Agile environments.</p>
+<!-- HERO -->
+<section class="bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+  <div class="max-w-6xl mx-auto px-6 py-20">
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+      Thet Paing Oo
+    </h1>
+    <p class="mt-4 text-lg text-slate-300">
+      Senior Backend / Full-Stack Developer
+    </p>
 
-          <div class="chips" aria-hidden>
-            <div class="chip">Java 17+</div>
-            <div class="chip">Spring Boot</div>
-            <div class="chip">Microservices</div>
-            <div class="chip">PostgreSQL</div>
-            <div class="chip">Docker · Kubernetes</div>
-            <div class="chip">CI / CD</div>
-            <div class="chip">Security (JWT, OAuth2)</div>
-          </div>
-
-          <section class="workspace">
-            <h2>Responsibilities & Leadership</h2>
-            <p class="muted">Designed and developed scalable backend services, led REST API & microservices implementation, mentored junior developers, and improved deployment pipelines and observability.</p>
-          </section>
-
-          <section class="workspace">
-            <h2>System Design & Architecture</h2>
-            <p class="muted">Domain-driven design, service-to-service communication patterns, fault tolerance, circuit breakers, tracing, and metrics (OpenTelemetry / Prometheus / Grafana).</p>
-          </section>
-
-        </div>
-
-        <section class="workspace">
-          <h2>Selected Projects</h2>
-          <div class="projects">
-            <article class="project">
-              <h3>Enterprise Banking Backend</h3>
-              <p>Secure microservices for authentication, customer management and transaction processing.</p>
-              <div class="tech"><small class="muted">Java • Spring Boot • PostgreSQL • Docker</small></div>
-              <a class="btn" href="#" role="button">View on GitHub</a>
-            </article>
-
-            <article class="project">
-              <h3>API Gateway & BFF</h3>
-              <p>Backend-for-frontend services to optimise API consumption and frontend performance.</p>
-              <div class="tech"><small class="muted">Spring Cloud Gateway • OAuth2 • Kubernetes</small></div>
-              <a class="btn" href="#" role="button">View on GitHub</a>
-            </article>
-
-            <article class="project">
-              <h3>Billing & Reconciliation</h3>
-              <p>High-throughput billing pipeline with robust reconciliation and reporting.</p>
-              <div class="tech"><small class="muted">Kafka • Spring Boot • Redis</small></div>
-              <a class="btn" href="#" role="button">View on GitHub</a>
-            </article>
-
-            <article class="project">
-              <h3>Observability Platform</h3>
-              <p>Tracing and metrics to improve production incident response and SLOs.</p>
-              <div class="tech"><small class="muted">OpenTelemetry • Prometheus • Grafana</small></div>
-              <a class="btn" href="#" role="button">View on GitHub</a>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <aside class="card profile" aria-label="Profile and contact">
-        <div class="avatar" aria-hidden>TP</div>
-        <div>
-          <h3 style="margin:6px 0 0;color:var(--accent)">Thet Paing</h3>
-          <p style="margin:6px 0 0;color:var(--muted);font-size:14px">Senior Backend Developer</p>
-        </div>
-
-        <div class="contact">
-          <a class="chip" href="mailto:yourname@email.com" id="emailLink">Email</a>
-          <a class="chip" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-          <a class="chip" href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-
-        <div style="width:100%">
-          <a class="btn" href="#contact" style="width:100%;display:inline-block;text-align:center">Get in touch</a>
-        </div>
-
-        <small style="color:var(--muted);margin-top:8px;display:block">Available for remote & hybrid roles</small>
-      </aside>
-    </main>
-
-    <section id="contact" class="card" style="margin-top:22px">
-      <h2>Mentorship & Process Improvement</h2>
-      <p class="muted">Mentored junior developers through code reviews and design discussions. Contributed to coding standards and CI/CD improvements.</p>
-
-      <h2 style="margin-top:18px">Contact</h2>
-      <p style="margin:6px 0">Email: <a href="mailto:yourname@email.com">yourname@email.com</a></p>
-      <p style="margin:6px 0">GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></p>
-      <p style="margin:6px 0">LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></p>
-    </section>
-
-    <footer>
-      <p>© 2026 Senior Backend Developer Portfolio — Built with ❤️ and Spring Boot vibes</p>
-    </footer>
+    <div class="mt-6 text-sm text-slate-400 space-y-1">
+      <p>📍 Yangon, Myanmar</p>
+      <p>📧 thetpaingoo828@gmail.com</p>
+      <p>📞 +95 996 097 6280</p>
+    </div>
   </div>
+</section>
 
-  <script>
-    // Theme toggle — persists choice in localStorage
-    (function(){
-      const page = document.documentElement;
-      const stored = localStorage.getItem('theme');
-      const toggle = document.getElementById('themeToggle');
-      const root = document.getElementById('page');
+<!-- SUMMARY -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-bold mb-4">Professional Summary</h2>
+  <p class="text-slate-600 leading-relaxed max-w-4xl">
+    Senior Web Developer with strong expertise in backend and full-stack development.
+    Experienced in enterprise-level systems including banking, HXM, and workflow
+    management platforms. Skilled in system architecture, API security, cloud deployment,
+    and team leadership using AWS and Microsoft Azure.
+  </p>
+</section>
 
-      function applyTheme(t){
-        if(t==='dark') document.documentElement.classList.add('dark');
-        else document.documentElement.classList.remove('dark');
-        toggle.setAttribute('aria-pressed', t==='dark');
-      }
+<!-- EXPERIENCE -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold mb-10">Work Experience</h2>
 
-      applyTheme(stored || 'light');
+    <!-- Yoma Bank -->
+    <div class="mb-10 border-l-4 border-blue-600 pl-6">
+      <h3 class="text-xl font-semibold">Yoma Bank</h3>
+      <p class="text-sm text-slate-500 mb-4">
+        Senior Backend / Full-Stack Developer · Feb 2024 – Present
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-slate-600">
+        <li>Developed Angular + Node.js (Express) applications with PostgreSQL</li>
+        <li>Designed UI/UX using Figma and implemented production-ready interfaces</li>
+        <li>Implemented JWT authentication and role-based authorization</li>
+        <li>Built AWS Lambda workflows and used S3 for secure storage</li>
+        <li>Integrated third-party APIs, SSO, and data synchronization</li>
+        <li>Led junior developers and performed QA testing</li>
+      </ul>
+    </div>
 
-      toggle.addEventListener('click', ()=>{
-        const isDark = document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', isDark? 'dark':'light');
-        toggle.setAttribute('aria-pressed', isDark);
-      });
+    <!-- MIT -->
+    <div class="border-l-4 border-indigo-600 pl-6">
+      <h3 class="text-xl font-semibold">Myanmar Information Technology (MIT)</h3>
+      <p class="text-sm text-slate-500">
+        Second Team Lead · Feb 2023 – Jan 2024
+      </p>
+      <p class="text-sm text-slate-500 mb-4">
+        Software Developer · Oct 2019 – Dec 2022
+      </p>
+      <ul class="list-disc list-inside space-y-2 text-slate-600">
+        <li>Built HXM, Payroll, Recruitment, and Workflow systems</li>
+        <li>Used Angular with Java Spring Boot and MSSQL</li>
+        <li>Implemented Spring Security with JWT and RBAC</li>
+        <li>Integrated Active Directory Single Sign-On</li>
+        <li>Developed permission-based dynamic forms</li>
+        <li>Supported UAT and production deployments</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-      // helpful email copy
-      const emailLink = document.getElementById('emailLink');
-      emailLink.addEventListener('click', (e)=>{
-        // allow mailto but also copy to clipboard for convenience
-        try{
-          navigator.clipboard && navigator.clipboard.writeText('yourname@email.com');
-        }catch(e){}
-      });
-    })();
-  </script>
+<!-- SKILLS -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-bold mb-8">Technical Skills</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-white p-5 rounded-xl shadow-sm">
+      <h4 class="font-semibold mb-2">Languages</h4>
+      <p class="text-slate-600 text-sm">
+        Java, JavaScript, TypeScript, HTML, CSS
+      </p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm">
+      <h4 class="font-semibold mb-2">Frameworks</h4>
+      <p class="text-slate-600 text-sm">
+        Spring Boot, Spring REST, Node.js (Express), Angular
+      </p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm">
+      <h4 class="font-semibold mb-2">Databases</h4>
+      <p class="text-slate-600 text-sm">
+        PostgreSQL, MSSQL, MySQL
+      </p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm">
+      <h4 class="font-semibold mb-2">Cloud</h4>
+      <p class="text-slate-600 text-sm">
+        AWS (Lambda, S3), Microsoft Azure (VM)
+      </p>
+    </div>
+
+    <div class="bg-white p-5 rounded-xl shadow-sm">
+      <h4 class="font-semibold mb-2">Tools</h4>
+      <p class="text-slate-600 text-sm">
+        Git, GitHub, GitLab, Postman, JMeter, Firebase, Figma
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT -->
+<section class="bg-white">
+  <div class="max-w-6xl mx-auto px-6 py-16">
+    <h2 class="text-2xl font-bold mb-6">Project Highlight</h2>
+
+    <div class="rounded-xl border p-6">
+      <h3 class="text-xl font-semibold mb-3">
+        Content Management System (CMS)
+      </h3>
+      <ul class="list-disc list-inside space-y-2 text-slate-600">
+        <li>Backend CRUD system integrated with mobile application</li>
+        <li>Email verification and role-based access control</li>
+        <li>Google Preview for document viewing</li>
+        <li>PDF generation using iText</li>
+        <li>Firebase notifications and scheduled APIs</li>
+        <li>Azure VM deployment with UAT → Production flow</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-2xl font-bold mb-4">Education</h2>
+  <p class="text-slate-600">
+    <strong>Bachelor of Computer Science (B.C.Sc)</strong><br/>
+    University of Computer Studies, Yangon (2013 – 2019)
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-slate-900 text-slate-400">
+  <div class="max-w-6xl mx-auto px-6 py-8 text-center text-sm">
+    © 2026 Thet Paing Oo · Hosted on GitHub Pages
+  </div>
+</footer>
+
 </body>
 </html>
