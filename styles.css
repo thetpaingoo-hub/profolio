@@ -261,3 +261,66 @@ a{color:inherit}
   padding-top: 16px;
   color: var(--muted);
 }
+
+
+/* ---------- Mobile navigation ---------- */
+.nav-toggle{
+  display:none;
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.nav-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  z-index: 40;
+}
+
+/* prevent background scroll when menu is open */
+.no-scroll{ overflow: hidden; }
+
+@media (max-width: 760px){
+  .header__inner{ position: relative; }
+  .nav-toggle{ display:inline-flex; align-items:center; justify-content:center; }
+
+  /* Hide nav by default on mobile */
+  .nav{
+    display:none;
+    position:absolute;
+    top: 54px;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 16px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  /* When open */
+  .nav.nav--open{ display:flex; }
+
+  .nav a{
+    padding: 12px 12px;
+    border-radius: 14px;
+  }
+
+  .hero{ padding: 44px 0 18px; }
+  .hero__actions .btn{ width: 100%; }
+  .hero__actions{ gap: 10px; }
+  .hero__meta .pill{ font-size: 12.5px; }
+
+  .tl{ padding: 12px; }
+  .panel{ padding: 12px; }
+  .card{ padding: 12px; }
+}
