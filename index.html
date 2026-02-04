@@ -1,147 +1,286 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thet Paing Oo | Senior Backend Engineer</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thet Paing Oo — Senior Backend / Full Stack Developer (Java, Spring Boot, Angular). Banking & enterprise systems, secure APIs, microservices." />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Thet Paing Oo | Backend / Full Stack Developer</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thet Paing Oo | Backend / Full Stack Developer" />
+  <meta property="og:description" content="Java/Spring Boot, Angular. Banking & enterprise systems. Secure APIs, RBAC, microservices." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.png" />
 
-  <style>
-    body { scroll-behavior: smooth; }
-  </style>
+  <link rel="icon" href="assets/profile.png" />
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-slate-200">
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-<!-- HERO -->
-<section class="relative overflow-hidden">
-  <div class="max-w-7xl mx-auto px-6 py-28">
-    <div class="max-w-3xl">
-      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-white">
-        Thet Paing Oo
-      </h1>
-      <p class="mt-6 text-xl text-slate-300">
-        Senior Backend & Full-Stack Engineer
-      </p>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__text">Thet Paing Oo</span>
+      </a>
 
-      <p class="mt-8 text-slate-400 leading-relaxed">
-        I design and build secure, scalable enterprise systems.
-        Experienced in banking platforms, HXM solutions, cloud architecture,
-        and high-reliability backend services.
-      </p>
-
-      <div class="mt-10 flex flex-wrap gap-4 text-sm text-slate-400">
-        <span>📍 Yangon, Myanmar</span>
-        <span>📧 thetpaingoo828@gmail.com</span>
-        <span>📞 +95 996 097 6280</span>
-      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="nav__cta">Contact</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- METRICS -->
-<section class="relative -mt-16">
-  <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center">
-        <p class="text-3xl font-bold text-white">6+</p>
-        <p class="text-sm text-slate-400 mt-1">Years Experience</p>
+  <main id="main">
+    <section id="top" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="kicker">Senior Backend / Full Stack Developer</p>
+          <h1>Java + Spring Boot <span class="muted">|</span> Angular</h1>
+          <p class="lede">
+            I build secure, scalable backend services and practical web apps for banking and enterprise systems:
+            REST APIs, microservices, JWT/RBAC security, and clean releases to UAT & production.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn" href="#projects">View projects</a>
+            <a class="btn btn--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          </div>
+
+          <ul class="hero__meta" aria-label="Quick facts">
+            <li><span class="pill">Yangon, Myanmar</span></li>
+            <li><span class="pill">Banking & enterprise systems</span></li>
+            <li><span class="pill">API security (JWT/RBAC)</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__card" aria-label="Profile card">
+          <img class="avatar" src="assets/profile.png" alt="Portrait illustration" width="520" height="520" loading="eager" />
+          <div class="card__body">
+            <p class="card__name">Thet Paing Oo</p>
+            <p class="card__role">Senior Backend / Full Stack Developer</p>
+            <div class="card__links">
+              <a href="mailto:thetpaingoo828@gmail.com">thetpaingoo828@gmail.com</a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+              <span class="sep" aria-hidden="true">•</span>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+            </div>
+            <p class="hint">Replace GitHub/LinkedIn links with your real profiles.</p>
+          </div>
+        </div>
       </div>
-      <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center">
-        <p class="text-3xl font-bold text-white">Banking</p>
-        <p class="text-sm text-slate-400 mt-1">Enterprise Systems</p>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="prose">
+          <p>
+            Senior web developer with 4+ years’ experience delivering banking and enterprise web systems.
+            I specialise in Java/Spring Boot backend services and API security, with hands-on Angular/Node.js
+            full-stack delivery. I’ve led small teams, designed databases, integrated third-party systems (SSO, data sync),
+            and supported releases to UAT and production across cloud environments.
+          </p>
+        </div>
       </div>
-      <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center">
-        <p class="text-3xl font-bold text-white">Cloud</p>
-        <p class="text-sm text-slate-400 mt-1">AWS & Azure</p>
+    </section>
+
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <h2>Core skills</h2>
+        <div class="grid">
+          <article class="panel">
+            <h3>Backend</h3>
+            <ul class="tags">
+              <li>Java (SE/EE)</li><li>Spring Boot</li><li>Spring MVC / REST</li><li>Spring Security</li>
+              <li>Hibernate / JPA</li><li>Microservices</li><li>RESTful APIs</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Frontend</h3>
+            <ul class="tags">
+              <li>Angular</li><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Databases</h3>
+            <ul class="tags">
+              <li>PostgreSQL</li><li>MSSQL</li><li>MySQL</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Cloud & DevOps</h3>
+            <ul class="tags">
+              <li>AWS (Lambda, S3)</li><li>Azure (VMs/Portal)</li><li>Docker</li><li>Git/GitLab</li>
+              <li>CI/CD exposure (Jenkins/GitLab CI)</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Quality & tools</h3>
+            <ul class="tags">
+              <li>Postman</li><li>JMeter</li><li>Figma</li><li>Firebase</li><li>iText (PDF)</li>
+              <li>Basic monitoring exposure (Prometheus/ELK)</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Security</h3>
+            <ul class="tags">
+              <li>JWT authentication</li><li>Role-based access control (RBAC)</li>
+              <li>Action-level authorisation</li><li>SSO (Active Directory)</li>
+            </ul>
+          </article>
+        </div>
       </div>
-      <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center">
-        <p class="text-3xl font-bold text-white">Security</p>
-        <p class="text-sm text-slate-400 mt-1">JWT · RBAC · SSO</p>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+
+        <div class="timeline">
+          <article class="tl">
+            <div class="tl__meta">
+              <p class="tl__where">Yoma Bank</p>
+              <p class="tl__when">Feb 2024 – Present</p>
+            </div>
+            <div class="tl__body">
+              <h3>Senior Backend Developer</h3>
+              <ul>
+                <li>Design and develop secure, scalable backend services using Java and Spring Boot for banking platforms.</li>
+                <li>Build and maintain REST APIs and microservice-based integrations; collaborate with BFF and front-end teams.</li>
+                <li>Implement API security using JWT and Spring Security, including RBAC and robust error handling.</li>
+                <li>Contribute to Agile/Scrum ceremonies and architecture/technical decisions; review code and troubleshoot issues.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl">
+            <div class="tl__meta">
+              <p class="tl__where">Myanmar Information Technology (MIT)</p>
+              <p class="tl__when">Feb 2023 – Jan 2024</p>
+            </div>
+            <div class="tl__body">
+              <h3>Second Team Lead</h3>
+              <ul>
+                <li>Led a delivery team building enterprise HR and workflow systems (HXM, Payroll, Recruitment).</li>
+                <li>Owned data modelling and technical design discussions; translated requirements into implementable designs.</li>
+                <li>Developed full-stack features using Angular + Spring Boot with MSSQL/PostgreSQL.</li>
+                <li>Implemented SSO with local Active Directory; delivered permission-driven dynamic forms and role-based UI access.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl">
+            <div class="tl__meta">
+              <p class="tl__where">Myanmar Information Technology (MIT)</p>
+              <p class="tl__when">Oct 2019 – Dec 2022</p>
+            </div>
+            <div class="tl__body">
+              <h3>Developer</h3>
+              <ul>
+                <li>Delivered web applications using Angular + Node.js/Express with PostgreSQL.</li>
+                <li>Designed UI in Figma and implemented responsive, maintainable Angular components.</li>
+                <li>Built AWS Lambda functions to support production workflows; used AWS S3 as a storage layer.</li>
+                <li>Integrated third-party systems for API integration, data synchronisation, and Single Sign-On.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section id="projects" class="section section--alt">
+      <div class="container">
+        <h2>Selected projects</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>CMS & Mobile Integration</h3>
+            <p class="sub">Java • Spring Boot • REST APIs</p>
+            <ul>
+              <li>Built CRUD APIs for a content management system and integrated with a mobile app.</li>
+              <li>Implemented location capture (lat/long), in-app banners, download tracking, and scheduled event APIs.</li>
+              <li>Integrated Firebase notifications and supported UAT + live patch releases.</li>
+            </ul>
+            <div class="card__footer">
+              <a class="link" href="#" aria-disabled="true" onclick="return false;">Private repo</a>
+              <span class="dot" aria-hidden="true">•</span>
+              <span class="hint">Add links/screenshots if you can share them.</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Document Workflow & Approval Portal</h3>
+            <p class="sub">Angular • Java • Azure</p>
+            <ul>
+              <li>Implemented onboarding with email verification and secure access controls.</li>
+              <li>Delivered document preview (Google Preview), processing dashboard, and role-based attachment handling.</li>
+              <li>Deployed on Azure VM and generated PDFs using iText (preview/download).</li>
+            </ul>
+            <div class="card__footer">
+              <a class="link" href="#" aria-disabled="true" onclick="return false;">Private repo</a>
+              <span class="dot" aria-hidden="true">•</span>
+              <span class="hint">Replace with GitHub links where possible.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="panel panel--wide">
+          <p class="edu__title">Bachelor of Computer Science (B.C.Sc)</p>
+          <p class="edu__meta">University of Computer Studies, Yangon • 2013 – 2019</p>
+          <p class="edu__meta">Languages: Burmese (Native), English (Intermediate)</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact">
+          <div class="prose">
+            <p>
+              The fastest way to reach me is email. I’m open to backend / full-stack roles (Java/Spring Boot + Angular),
+              especially products that care about reliability, security, and clean delivery.
+            </p>
+          </div>
+
+          <div class="contact__box">
+            <p><strong>Email</strong><br /><a href="mailto:thetpaingoo828@gmail.com">thetpaingoo828@gmail.com</a></p>
+            <p><strong>Location</strong><br />Yangon, Myanmar</p>
+            <p><strong>CV</strong><br /><a href="assets/resume.pdf" target="_blank" rel="noopener">Download PDF</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> Thet Paing Oo</p>
+      <p class="muted">Built for GitHub Pages • Lightweight, no frameworks</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- EXPERIENCE -->
-<section class="max-w-7xl mx-auto px-6 py-24">
-  <h2 class="text-3xl font-bold text-white mb-12">Experience</h2>
-
-  <div class="space-y-12">
-    <div class="bg-white/5 backdrop-blur rounded-2xl p-8">
-      <h3 class="text-xl font-semibold text-white">Yoma Bank</h3>
-      <p class="text-sm text-slate-400 mt-1">
-        Senior Backend / Full-Stack Engineer · Feb 2024 – Present
-      </p>
-
-      <ul class="mt-6 space-y-3 text-slate-300">
-        <li>• Designed and implemented Angular + Node.js systems with PostgreSQL</li>
-        <li>• Led data modeling and enterprise architecture decisions</li>
-        <li>• Implemented JWT authentication, RBAC, and action-level authorization</li>
-        <li>• Built AWS Lambda workflows and S3-based storage solutions</li>
-        <li>• Integrated third-party APIs, SSO, and data synchronization</li>
-        <li>• Mentored junior engineers and led QA reviews</li>
-      </ul>
-    </div>
-
-    <div class="bg-white/5 backdrop-blur rounded-2xl p-8">
-      <h3 class="text-xl font-semibold text-white">Myanmar Information Technology (MIT)</h3>
-      <p class="text-sm text-slate-400 mt-1">
-        Second Team Lead · Feb 2023 – Jan 2024<br/>
-        Software Developer · Oct 2019 – Dec 2022
-      </p>
-
-      <ul class="mt-6 space-y-3 text-slate-300">
-        <li>• Built HXM, Payroll, Recruitment, and Workflow platforms</li>
-        <li>• Developed Angular + Spring Boot applications with MSSQL</li>
-        <li>• Implemented Spring Security with JWT and RBAC</li>
-        <li>• Integrated Active Directory SSO</li>
-        <li>• Designed permission-based dynamic form systems</li>
-        <li>• Supported UAT and production deployments</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="bg-black/20 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-3xl font-bold text-white mb-12">Technical Expertise</h2>
-
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 text-slate-300">
-      <div>
-        <p class="font-semibold text-white mb-2">Languages</p>
-        <p>Java · JavaScript · TypeScript · HTML · CSS</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Frameworks</p>
-        <p>Spring Boot · Node.js · Express · Angular</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Databases</p>
-        <p>PostgreSQL · MSSQL · MySQL</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Cloud</p>
-        <p>AWS (Lambda, S3) · Microsoft Azure</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Security</p>
-        <p>JWT · RBAC · SSO · API Protection</p>
-      </div>
-      <div>
-        <p class="font-semibold text-white mb-2">Tools</p>
-        <p>Git · GitHub · GitLab · Postman · JMeter · Figma</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="py-10 text-center text-sm text-slate-400">
-  © 2026 Thet Paing Oo · Built with Tailwind · Hosted on GitHub Pages
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
